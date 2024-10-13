@@ -2,12 +2,12 @@
 import Link from "next/link";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Research_Paper from "./components/research"
-export default function Home() {
+import Blog from "./components/blog"
+export default function Blog() {
   return (
     <>
       <Navbar />
-      <Research_Paper/>
+      <Blog/>
       <Footer/>
     </>
   );
