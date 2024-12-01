@@ -1,0 +1,16 @@
+[
+  {
+    "title": "First Blog Post",
+    "date": "2024-10-13",
+    "author": "Vidushi Gandhi",
+    "excerpt": "This is an overview of the first blog post.",
+    "link": "https://externalblog.com/first-blog-post"
+  },
+  {
+    "title": "Second Blog Post",
+    "date": "2024-10-10",
+    "author": "Vidushi Gandhi",
+    "excerpt": "This is an overview of the second blog post.",
+    "link": "https://externalblog.com/second-blog-post"
+  }
+]

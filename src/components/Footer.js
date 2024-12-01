@@ -16,10 +16,10 @@ export default function Footer() {
       {/* Right section: Social Media Icons */}
       <div className="flex justify-center sm:justify-start space-x-4 mt-6 sm:mt-0">
         <a href="https://www.linkedin.com/in/vidushi-gandhi27/" ><FaLinkedinIn size ='30'/></a>
-        <a href="https://github.com/Vidushi-Gandhi"><FaGithub size ='30' color = ''/></a>
+        <a href="https://github.com/VGandhi27"><FaGithub size ='30' color = ''/></a>
         <a href="https://github.com/Vidushi-Gandhi"><CiMail size ='30'/></a>
-        <a href="https://github.com/Vidushi-Gandhi"><FaInstagram size ='30'/></a>
-        <a href="https://github.com/Vidushi-Gandhi"><FaGoogleScholar size ='30'/></a>
+        <a href="https://www.instagram.com/vgandhi72/"><FaInstagram size ='30'/></a>
+        <a href="https://scholar.google.com/citations?user=pHa-9woAAAAJ&hl=en"><FaGoogleScholar size ='30'/></a>
       </div>
     </div>
  

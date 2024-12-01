@@ -1,0 +1,72 @@
+.contactContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px; // Reduce padding for a more compact design
+    background-color: #f9fafb; // Light background for the container
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header {
+    padding-bottom: 10px;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .formField {
+    margin-bottom: 15px; // Reduce the margin to minimize the height
+  }
+  
+  .label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+  
+  .inputField, .textArea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .textArea {
+    resize: vertical; // Allow resizing of the textarea but in a minimal way
+    min-height: 80px; // Control the minimum height of the textarea
+  }
+  
+  .submitButton {
+    margin-top: 10px;
+  }
+  
+  .submitBtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submitBtn:hover {
+    background-color: #45a049;
+  }
+  
+  .linkSection {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
+  
