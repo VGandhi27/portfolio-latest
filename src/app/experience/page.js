@@ -1,9 +1,9 @@
 // pages/index.js
-import About from "../components/about"
+import Experience from "../../components/experience"
 export default function page() {
   return (
     <>
-      <About/>
+      <Experience/>
     </>
   );
 }

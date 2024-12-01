@@ -1,0 +1,21 @@
+[
+    {
+      "role": "Data Science Engineer",
+      "company": "Iktara Data Sciences",
+      "duration": "Jan 2024 - Present",
+      "description": "Developing the Airtel Transmission System and creating an inventory data storage pipeline for Airtel. Responsible for detecting configuration changes and building dashboards for model training."
+    },
+    {
+      "role": "Software Engineer",
+      "company": "Microsoft",
+      "duration": "2022 - 2023",
+      "description": "Worked on developing Computer Vision systems and Mixed Reality apps for Microsoft Hololens."
+    },
+    {
+      "role": "Software Engineer Intern",
+      "company": "GitHub",
+      "duration": "2021",
+      "description": "Worked as a Software Engineer Intern, contributing to GitHub's platform with a focus on backend development."
+    }
+  ]
+  

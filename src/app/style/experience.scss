@@ -1,0 +1,92 @@
+.timelineContainer {
+    background-color: #e0e0e0;
+    color: #121212;
+    padding: 50px;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    color: #c792ea;
+    margin-bottom: 50px;
+  }
+  
+  .timeline {
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+    padding: 20px 0;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 4px;
+      height: 100%;
+      background-color: #c792ea;
+    }
+  }
+  
+  .timelineItem {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 40px 0;
+  
+    &.left {
+      flex-direction: row-reverse;
+    }
+  
+    .timelineDot {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #c792ea;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      z-index: 2;
+    }
+  
+    .experienceCard {
+      background-color: #1e1e1e;
+      color: #fff;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      z-index: 1;
+      width: calc(50% - 40px);
+      text-align: left;
+  
+      h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: #c792ea;
+      }
+  
+      h4 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        color: #ffffff;
+      }
+  
+      .duration {
+        font-size: 1rem;
+        color: #aaaaaa;
+        margin-bottom: 15px;
+        display: block;
+      }
+  
+      p {
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #d4d4d4;
+      }
+    }
+  }
+  
