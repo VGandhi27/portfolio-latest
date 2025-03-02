@@ -1,6 +1,6 @@
 // pages/index.js
 import Link from "next/link";
-
+import "./globals.css"
 export default function About_Com() {
   return (
     <div className="max-w-4xl mx-auto p-6 text-left mt-10">
