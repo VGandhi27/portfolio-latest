@@ -1,0 +1,279 @@
+// @import "tailwindcss/base";
+// @import "tailwindcss/components";
+// @import "tailwindcss/utilities";
+
+// // Global styles
+// body {
+//   font-family: 'Inter', sans-serif;
+//   background-color: #0d1117;
+//   color: #ffffff;
+// }
+
+// // Buttons
+// .btn-primary {
+//   background-color: #3b82f6;
+//   color: white;
+//   padding: 12px 24px;
+//   border-radius: 8px;
+//   font-weight: 600;
+//   transition: background-color 0.3s ease;
+// }
+
+// .btn-primary:hover {
+//   background-color: #2563eb;
+// }
+
+// .btn-secondary {
+//   border: 1px solid #9ca3af;
+//   color: #d1d5db;
+//   padding: 12px 24px;
+//   border-radius: 8px;
+//   transition: background-color 0.3s ease, color 0.3s ease;
+// }
+
+// .btn-secondary:hover {
+//   background-color: #1f2937;
+//   color: #fff;
+// }
+
+// // Hero Section
+// .hero {
+//   text-align: center;
+//   padding: 80px 20px;
+// }
+
+// .hero h1 {
+//   font-size: 2.5rem;
+//   font-weight: bold;
+// }
+
+// .hero p {
+//   font-size: 1.125rem;
+//   color: #9ca3af;
+// }
+
+// // About Section
+// .about {
+//   padding: 40px 24px;
+//   text-align: center;
+// }
+
+// .about h2 {
+//   font-size: 1.75rem;
+//   font-weight: 600;
+// }
+
+// .about p {
+//   max-width: 640px;
+//   margin: 0 auto;
+//   color: #d1d5db;
+// }
+
+// // Projects Section
+// .projects {
+//   padding: 40px 24px;
+// }
+
+// .projects h2 {
+//   font-size: 1.75rem;
+//   font-weight: 600;
+//   text-align: center;
+//   margin-bottom: 24px;
+// }
+
+// .project-card {
+//   padding: 16px;
+//   background-color: #1f2937;
+//   border-radius: 8px;
+//   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+// }
+
+// .project-card h3 {
+//   font-size: 1.25rem;
+//   font-weight: bold;
+// }
+
+// .project-card p {
+//   color: #9ca3af;
+//   font-size: 0.875rem;
+//   margin-top: 8px;
+// }
+
+// // Contact Section
+// .contact {
+//   padding: 40px 24px;
+//   text-align: center;
+// }
+
+// .contact h2 {
+//   font-size: 1.75rem;
+//   font-weight: 600;
+// }
+
+// .contact p {
+//   color: #9ca3af;
+// }
+
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+// Global styles
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0d1117;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+// Hero Section
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #3b82f6, #9333ea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: #9ca3af;
+  max-width: 700px;
+  margin: 0 auto 20px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #3b82f6, #9333ea);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s;
+  box-shadow: 0px 4px 15px rgba(59, 130, 246, 0.5);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #2563eb, #7e22ce);
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  border: 2px solid #9ca3af;
+  color: #d1d5db;
+  padding: 14px 28px;
+  border-radius: 8px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+// About Section
+.about {
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.about p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #d1d5db;
+  font-size: 1.2rem;
+}
+
+// Projects Section
+.projects {
+  padding: 80px 24px;
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.project-card {
+  padding: 20px;
+  background: linear-gradient(135deg, #1f2937, #374151);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project-card h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.project-card p {
+  color: #9ca3af;
+  font-size: 1rem;
+  margin-top: 8px;
+}
+
+// Contact Section
+.contact {
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.contact p {
+  color: #9ca3af;
+  font-size: 1.2rem;
+}
+
+// Footer
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #111827;
+  color: #9ca3af;
+  font-size: 1rem;
+}
