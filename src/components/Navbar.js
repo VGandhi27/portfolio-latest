@@ -17,6 +17,7 @@ const Navbar = ({ currentPath }) => {
     { href: "/research", label: "Research" },
     { href: "/projects", label: "Projects" },
     { href: "/experience", label: "Experience" },
+    { href: "/chat", label: "Chatwithme" },
     { href: "/contact", label: "Contact" },
     
   ];
