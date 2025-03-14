@@ -1,0 +1,72 @@
+Basic cmd of postgres
+
+# show database
+\c 
+# use database
+\c <database name>
+
+# create database 
+create database <dbname>;
+
+# show tables 
+\dt 
+
+# Ensure vector Extension is Installed
+CREATE EXTENSION IF NOT EXISTS vector;
+
+CREATE TABLE embeddings (
+    id SERIAL PRIMARY KEY,
+    content TEXT, 
+    embedding VECTOR(384)  -- Adjust this if needed
+);
+
+
+select count(*) from embeddings;
+
+
+# Adjust psql Output Format
+# Since embeddings are large JSON arrays, psql may be struggling to display them properly
+
+\x on
+SET client_encoding = 'UTF8';
+SELECT * FROM embeddings;
+\x off
+
+
+SELECT id, LEFT(content, 200) AS content_preview FROM embeddings LIMIT 5;
+
+SELECT id, length(embedding::text) FROM embeddings LIMIT 5;
+
+# Describe table cmd
+\d embeddings;
+
+# This is the table description we have created for this project
+portfolio=# \d embeddings;
+                                Table "public.embeddings"
+  Column   |    Type     | Collation | Nullable |                Default
+-----------+-------------+-----------+----------+----------------------------------------
+ id        | integer     |           | not null | nextval('embeddings_id_seq'::regclass)
+ content   | text        |           |          |
+ embedding | vector(384) |           |          |
+Indexes:
+    "embeddings_pkey" PRIMARY KEY, btree (id)
+
+
+
+# use PostgreSQL 16 version for this
+# Run the cmd prompt with Admin rights
+# Follow this guideline https://github.com/pgvector/pgvector
+
+# Adjust the cmd accordingly for your reference
+call "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat"
+
+set "PGROOT=C:\Program Files\PostgreSQL\16"
+cd %TEMP%
+git clone --branch v0.8.0 https://github.com/pgvector/pgvector.git
+cd pgvector
+nmake /F Makefile.win
+nmake /F Makefile.win install
+
+
+https://www.youtube.com/watch?v=0eDXpNzAjV4
+step by step guide for installations of pg vector extension for PostgreSQL
