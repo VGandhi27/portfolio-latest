@@ -14,20 +14,22 @@ export default function ChatWithMe() {
     setLoading(true);
 
     try {
-      const response = await fetch("/api/chat", {
+      const response = await fetch("http://localhost:40/chatbot/search/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: input }),
+        body: JSON.stringify({ query: input }),
       });
 
+      if (!response.ok) throw new Error("Failed to fetch response");
       const data = await response.json();
-      setMessages([...messages, newMessage, { text: data.reply, sender: "bot" }]);
+
+      setMessages([...messages, newMessage, { text: data.results?.[0]?.text || "No relevant answer found.", sender: "bot" }]);
     } catch (error) {
       setMessages([...messages, newMessage, { text: "Error connecting to AI.", sender: "bot" }]);
     }
 
     setLoading(false);
-    setInput(""); // Clear input
+    setInput("");
   };
 
   return (
@@ -59,7 +61,7 @@ export default function ChatWithMe() {
             placeholder="Ask me about Vidushi..."
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            onKeyPress={(e) => e.key === "Enter" && sendMessage()}
+            onKeyDown={(e) => e.key === "Enter" && sendMessage()}
           />
           <button
             onClick={sendMessage}
