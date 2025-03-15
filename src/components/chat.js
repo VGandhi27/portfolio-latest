@@ -5,12 +5,13 @@ export default function ChatWithMe() {
     { text: "Hey! Ask me anything about Vidushi Gandhi.", sender: "bot" },
   ]);
   const [input, setInput] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false); // ✅ Fixed useState syntax
 
   const sendMessage = async () => {
     if (!input.trim()) return;
+
     const newMessage = { text: input, sender: "user" };
-    setMessages([...messages, newMessage]);
+    setMessages((prevMessages) => [...prevMessages, newMessage]);
     setLoading(true);
 
     try {
@@ -21,11 +22,18 @@ export default function ChatWithMe() {
       });
 
       if (!response.ok) throw new Error("Failed to fetch response");
-      const data = await response.json();
 
-      setMessages([...messages, newMessage, { text: data.results?.[0]?.text || "No relevant answer found.", sender: "bot" }]);
+      const data = await response.json();
+      const botResponseText = data.results?.[0]?.text || "No relevant answer found.";
+
+      const botResponse = { text: botResponseText.replace(/\n/g, "<br/>"), sender: "bot" };
+
+      setMessages((prevMessages) => [...prevMessages, botResponse]);
     } catch (error) {
-      setMessages([...messages, newMessage, { text: "Error connecting to AI.", sender: "bot" }]);
+      setMessages((prevMessages) => [
+        ...prevMessages,
+        { text: "Error connecting to AI.", sender: "bot" },
+      ]);
     }
 
     setLoading(false);
@@ -47,9 +55,8 @@ export default function ChatWithMe() {
                   ? "bg-blue-500 text-white ml-auto text-right"
                   : "bg-gray-700 text-left mr-auto"
               }`}
-            >
-              {msg.text}
-            </div>
+              dangerouslySetInnerHTML={{ __html: msg.text }} // ✅ Properly renders multi-line AI responses
+            />
           ))}
         </div>
 
