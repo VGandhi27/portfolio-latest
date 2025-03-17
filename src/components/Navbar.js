@@ -1,12 +1,10 @@
 "use client";
-import "./globals.css"
-import "../app/style/base.scss"
 import Link from "next/link";
 import { useState } from "react";
 
 const Navbar = ({ currentPath }) => {
   const [isOpen, setIsOpen] = useState(false);
-
+  
   const toggleMenu = () => setIsOpen(!isOpen);
   const isActive = (path) => currentPath === path;
 
@@ -19,17 +17,17 @@ const Navbar = ({ currentPath }) => {
     { href: "/experience", label: "Experience" },
     { href: "/chat", label: "Chatwithme" },
     { href: "/contact", label: "Contact" },
-    
   ];
 
   return (
-    <nav className="bg-white text-black max-w-4xl mx-auto text-center">
+    <nav className="bg-[#1f2937] text-white shadow-md">
       <div className="max-w-6xl mx-auto flex justify-between items-center p-4">
+        {/* Logo */}
         <div className="text-2xl font-bold">
           <Link href="/">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-6 h-6"
+              className="w-8 h-8 text-white"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -37,24 +35,31 @@ const Navbar = ({ currentPath }) => {
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                strokeWidth={2}
                 d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
               />
             </svg>
           </Link>
         </div>
-        <div className="hidden md:flex space-x-4">
+
+        {/* Desktop Menu */}
+        <div className="hidden md:flex space-x-6">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               className={`${
-                isActive(link.href) ? "text-blue-500" : "hover:text-gray-400"
-              }`}
+                isActive(link.href)
+                  ? "text-blue-400 border-b-2 border-blue-400"
+                  : "hover:text-gray-300"
+              } transition duration-300 pb-1`}
             >
               {link.label}
             </Link>
           ))}
         </div>
+
+        {/* Mobile Menu Button */}
         <div className="md:hidden">
           <button
             onClick={toggleMenu}
@@ -64,7 +69,7 @@ const Navbar = ({ currentPath }) => {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
+              className="h-8 w-8 text-white"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -89,14 +94,15 @@ const Navbar = ({ currentPath }) => {
         </div>
       </div>
 
+      {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden" role="menu">
-          <div className="flex flex-col space-y-2 p-4 bg-gray-700 text-white">
+        <div className="md:hidden bg-[#1f2937] text-white">
+          <div className="flex flex-col space-y-2 p-4">
             {links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="hover:text-gray-300"
+                className="hover:text-gray-300 transition duration-300"
                 onClick={toggleMenu}
               >
                 {link.label}

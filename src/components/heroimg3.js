@@ -16,7 +16,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="relative h-screen bg-black text-white flex flex-col items-center justify-center overflow-hidden">
+    <div className="relative min-h-[80vh] bg-black text-white flex flex-col items-center justify-center overflow-hidden">
       {/* Background Glow Effect */}
       <motion.div
         className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-700 to-pink-500 opacity-30 blur-[150px]"
