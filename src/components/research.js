@@ -13,7 +13,7 @@ const truncateText = (text, wordLimit) => {
 
 const Research = () => {
   return (
-    <div className='max-w-4xl mx-auto p-6 text-left'>
+    <div className='max-w-4xl mx-auto p-6 text-left' style={{marginTop: '5rem' }}>
       <h1 className="text-3xl font-bold mb-6">Research Papers</h1>
       <div>
         {researchPapers.map((paper) => {

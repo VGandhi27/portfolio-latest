@@ -7,7 +7,7 @@ const ExperiencePage = () => {
   const [experiences] = useState(experienceData); // Set initial state with imported data
 
   return (
-    <div className="timelineContainer">
+    <div className="timelineContainer" style={{marginTop: '3rem' }}>
       <h1 className="title">My Work Experience</h1>
       <div className="timeline">
         {experiences.map((experience, index) => (

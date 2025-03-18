@@ -3,7 +3,8 @@ import Link from "next/link";
 import "./globals.css"
 export default function About_Com() {
   return (
-    <div className="max-w-4xl mx-auto p-6 text-left mt-10">
+    
+    <div className="max-w-4xl mx-auto p-6 text-left mt-10" style={{marginTop: '5rem' }}>
      <div className="flex justify-between items-center">
     <h1 className="text-4xl font-bold mt-2 mb-6">About Me</h1>
     <a

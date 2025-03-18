@@ -27,7 +27,7 @@ export default function Contact_Com() {
   };
 
   return (
-    <div className="contactContainer">
+    <div className="contactContainer" style={{marginTop: '5rem' }}>
       <div className={styles.header}>
         <h1 className="text-4xl font-bold mt-2 mb-6">
           Eager to Connect? Contact Me

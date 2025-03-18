@@ -7,52 +7,8 @@ $font-size-large: 2.5rem;
 $font-size-medium: 1.2rem;
 $line-height: 1.6;
 
-// Navbar Styles
-$navbar-bg-color: #1f2937; // Dark gray background
-$navbar-text-color: #ffffff; // White text color
-$navbar-hover-color: #3b82f6; // Blue on hover
-$navbar-height: 60px; // Navbar height
-
-.navbar {
-  background-color: $navbar-bg-color;
-  padding: 0 $padding; // Horizontal padding
-  height: $navbar-height;
-  display: flex;
-  align-items: center;
-
-  .container {
-    max-width: $max-width;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between; // Ensure space between logo and links
-    align-items: center;
-    width: 100%; // Ensure full width
-
-    .logo {
-      font-size: 1.5rem; // Adjusted logo size
-      font-weight: bold;
-      color: $navbar-text-color;
-      text-decoration: none;
-    }
-
-    .nav-links {
-      display: flex; // Make sure to use flex display
-      gap: 30px; // Increased gap for better spacing
-
-      a {
-        color: $navbar-text-color;
-        text-decoration: none;
-        padding: 8px 12px; // Padding for clickable area
-        border-radius: 4px; // Rounded corners
-        transition: background-color 0.3s, color 0.3s;
-
-        &:hover {
-          background-color: $navbar-hover-color; // Change background on hover
-          color: #ffffff; // Keep text color white on hover
-        }
-      }
-    }
-  }
+.navbar-margin {
+  margin-top: 10rem;
 }
 
 // About Page Styles

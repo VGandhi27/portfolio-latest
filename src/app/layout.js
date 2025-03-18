@@ -27,7 +27,10 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {/* Add the Navbar component here */}
-        <Navbar />
+        <div className="navbar-margin">
+          <Navbar />
+        </div>
+
         {children}
         <Footer/>
       </body>
