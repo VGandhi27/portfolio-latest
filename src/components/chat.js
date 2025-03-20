@@ -41,8 +41,8 @@ export default function ChatWithMe() {
   };
 
   return (
-    <div className="h-screen flex flex-col items-center justify-center bg-gray-900 text-white">
-      <div className="w-full max-w-2xl bg-gray-800 p-6 rounded-lg shadow-lg">
+    <div className="min-h-[90vh] flex flex-col items-center justify-center text-white">
+      <div className="w-full max-w-2xl bg-purple-800 p-6 rounded-lg shadow-lg">
         <h2 className="text-2xl font-bold mb-4 text-center">Chat with Me</h2>
 
         {/* Chat Messages */}
