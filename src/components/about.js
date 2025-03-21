@@ -8,7 +8,7 @@ export default function About_Com() {
      <div className="flex justify-between items-center">
     <h1 className="text-4xl font-bold mt-2 mb-6">About Me</h1>
     <a
-      href="/path-to-resume.pdf" // Update with the actual path to your resume
+      href='/Vidushi_CV.pdf'
       className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
       target="_blank"
       rel="noopener noreferrer"
