@@ -31,7 +31,6 @@ export default function RootLayout({ children }) {
       <head>
         {/* Link to the favicon */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="stylesheet" href="/globals.css" />
         </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
