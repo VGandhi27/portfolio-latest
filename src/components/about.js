@@ -1,6 +1,4 @@
 // pages/index.js
-import Link from "next/link";
-import "./globals.css"
 export default function About_Com() {
   return (
     
