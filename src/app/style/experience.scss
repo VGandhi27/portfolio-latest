@@ -28,7 +28,7 @@
     background-color: #c792ea;
 
     @media (max-width: 768px) {
-      left: 20px; // Move timeline to left on mobile
+      left: 30px; // Shift timeline to the right
     }
   }
 }
@@ -38,7 +38,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin: 40px 0;
+  margin: 20px 0;
 
   &.left {
     flex-direction: row-reverse;
@@ -61,7 +61,7 @@
     z-index: 2;
 
     @media (max-width: 768px) {
-      left: 20px; // Move dots to left on mobile
+      left: 30px; // Shift dots to match line
     }
   }
 
@@ -77,8 +77,9 @@
     text-align: left;
 
     @media (max-width: 768px) {
-      width: calc(100% - 40px);
-      margin-left: 40px; // Adjust for timeline on mobile
+      width: 100%;
+      margin-left: 50px; // Add more space from left
+      padding-left: 10px;
     }
 
     h3 {
@@ -104,6 +105,20 @@
       font-size: 1rem;
       line-height: 1.5;
       color: #d4d4d4;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .timelineDot {
+      left: 30px; // Better alignment for mobile
+    }
+
+    .experienceCard {
+      width: 100%;
+      margin-left: 50px; // Add more spacing to the card from left
     }
   }
 }
