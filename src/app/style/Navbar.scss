@@ -8,12 +8,16 @@ $bg-gradient: linear-gradient(
   #000000
 );
 
+// body {
+//   margin-top: 60px; // Push content below navbar
+// }
+
 .navbar {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 1050; // Ensure navbar stays on top
   background: $bg-gradient;
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
@@ -76,23 +80,25 @@ $bg-gradient: linear-gradient(
   // Mobile menu styles
   @media (max-width: 768px) {
     .menu {
+      z-index: 1040;
       position: absolute;
-      top: 100%;
+      top: 60px;
       left: 0;
       width: 100%;
       background: $bg-gradient;
-      display: flex;
       flex-direction: column;
-      align-items: center;
-      gap: 1rem;
+      align-items: center; // Center menu items
+      text-align: center; // Ensure text is aligned    
       padding: 1rem 0;
-      transform: translateY(-100%);
-      transition: transform 0.3s ease-in-out;
-      margin-top: 18rem;
-    }
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease;
 
-    .menu.open {
-      transform: translateY(0);
+      &.open {
+        opacity: 1;
+        max-height: 300px;
+      }
     }
 
     .hamburger {
