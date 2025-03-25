@@ -106,7 +106,7 @@ export default function Contact_Com() {
       <div className="linkSection" style ={{marginTop : '2rem'}}>
         <p>
           Or you can connect with me on{" "}
-          <Link href="https://www.linkedin.com/in/vidushi-gandhi/" className="link text-green-600">
+          <Link href="https://www.linkedin.com/in/vidushi-gandhi27/" className="link text-green-600">
             LinkedIn
           </Link>
         </p>
