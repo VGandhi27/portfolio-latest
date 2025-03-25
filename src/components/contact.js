@@ -39,7 +39,7 @@ export default function Contact_Com() {
           Thank you for submitting the form! I will get back to you soon.
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="form ">
+        <form onSubmit={handleSubmit} className="min-h-[60vh] form">
           <div className="formField">
             <label htmlFor="name" className="label">
               Name
