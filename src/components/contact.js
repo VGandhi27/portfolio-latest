@@ -35,11 +35,11 @@ export default function Contact_Com() {
       </div>
 
       {submitted ? (
-        <div className="thankYouMessage text-green-600 text-xl font-bold">
+        <div className="min-h-[50vh] thankYouMessage text-green-600 text-l font-bold">
           Thank you for submitting the form! I will get back to you soon.
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="form">
+        <form onSubmit={handleSubmit} className="form ">
           <div className="formField">
             <label htmlFor="name" className="label">
               Name
@@ -103,10 +103,10 @@ export default function Contact_Com() {
         </form>
       )}
 
-      <div className="linkSection">
+      <div className="linkSection" style ={{marginTop : '2rem'}}>
         <p>
           Or you can connect with me on{" "}
-          <Link href="https://www.linkedin.com/in/vidushi-gandhi/" className="link">
+          <Link href="https://www.linkedin.com/in/vidushi-gandhi/" className="link text-green-600">
             LinkedIn
           </Link>
         </p>
