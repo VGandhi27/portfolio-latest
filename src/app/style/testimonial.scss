@@ -1,0 +1,105 @@
+// styles/testimonials.scss
+
+$bg-gradient: linear-gradient(
+  135deg,
+  #000000,
+  #1a0b23,
+  #39064a,
+  #5e0d6b,
+  #000000
+);
+
+.testimonial-section {
+    background: $bg-gradient; // Applying the same navbar gradient
+    padding: 4rem 2rem;
+    text-align: center;
+  
+    .testimonial-container {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+    }
+  
+    .testimonial-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1.5rem;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+      }
+  
+      .testimonial-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+  
+        img {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          margin-right: 1rem;
+          border: 3px solid #5e0d6b; // Border color matching the gradient
+        }
+  
+        .info {
+          h3 {
+            margin: 0;
+            color: #5e0d6b;
+            font-size: 1.2rem;
+          }
+  
+          p {
+            margin: 0;
+            color: #39064a;
+            font-size: 0.9rem;
+          }
+        }
+      }
+  
+      .testimonial-text {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #333;
+      }
+    }
+  
+    .dots {
+      margin-top: 1rem;
+  
+      .dot {
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+        background-color: #ddd;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.3s;
+  
+        &.active {
+          background-color: #5e0d6b;
+        }
+      }
+    }
+  }
+  
+  // Mobile responsiveness
+  @media (max-width: 768px) {
+    .testimonial-card {
+      padding: 1.5rem;
+    }
+  
+    .testimonial-header {
+      flex-direction: column;
+      align-items: center;
+  
+      img {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+  

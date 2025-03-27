@@ -1,0 +1,21 @@
+[
+    {
+      "name": "John Doe",
+      "role": "Software Engineer at Google",
+      "feedback": "Vidushi’s expertise in AI and NLP is impressive! She delivered exceptional work and met all our expectations.",
+      "image": "/friend.jpg"
+    },
+    {
+      "name": "Sarah Smith",
+      "role": "Product Manager at Microsoft",
+      "feedback": "Highly professional and detail-oriented. Her contributions to the project were invaluable.",
+      "image": "/friend.jpg"
+    },
+    {
+      "name": "Alex Johnson",
+      "role": "CTO at StartupX",
+      "feedback": "Vidushi’s deep understanding of Machine Learning helped us streamline our processes.",
+      "image": "/friend.jpg"
+    }
+  ]
+  
