@@ -50,6 +50,9 @@ const Navbar = () => {
           <Link href="/contact" onClick={handleLinkClick}>
             Contact
           </Link>
+          <Link href="/testimonial" onClick={handleLinkClick}>
+            Testimonials
+          </Link>
         </div>
         <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
           <span />
