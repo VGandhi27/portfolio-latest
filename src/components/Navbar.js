@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
+import { FiHome } from "react-icons/fi";
 import "../app/style/Navbar.scss";
 
 const Navbar = () => {
@@ -26,7 +27,7 @@ const Navbar = () => {
     <nav className={`navbar ${menuOpen ? "open" : ""}`}>
       <div className="container">
         <Link href="/" className="logo" onClick={handleLinkClick}>
-          🚀 Vidushi's Portfolio
+          <FiHome/>
         </Link>
         <div className={`menu ${menuOpen ? "open" : ""}`}>
           <Link href="/about" onClick={handleLinkClick}>
