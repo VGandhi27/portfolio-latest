@@ -1,3 +1,5 @@
+'use client';
+import { useState } from "react";
 import posts from "../data/posts";
 import Link from "next/link";
 import Image from "next/image";
@@ -18,11 +20,17 @@ const truncateSummary = (summary, wordLimit) => {
 };
 
 const BlogIndex = () => {
+  const [expandedPosts, setExpandedPosts] = useState({});
+
+  const toggleReadMore = (postId) => {
+    setExpandedPosts((prev) => ({
+      ...prev,
+      [postId]: !prev[postId], // Toggle between true and false
+    }));
+  };
+
   return (
-    <div
-      className="max-w-4xl mx-auto p-6 text-left"
-      style={{ marginTop: "5rem" }}
-    >
+    <div className="max-w-4xl mx-auto p-6 text-left" style={{ marginTop: "5rem" }}>
       <div className="container mx-auto p-4">
         <h1 className="text-4xl font-bold mb-6 text-center">Blog</h1>
         <h2 className="text-xl font-bold mt-2 mb-6 text-center">
@@ -32,34 +40,30 @@ const BlogIndex = () => {
         {/* Blog List */}
         <div>
           {posts.map((post) => {
-            const { truncated, full } = truncateSummary(post.summary, 20); // Truncate to 20 words
+            const { truncated, full } = truncateSummary(post.summary, 20);
+            const isExpanded = expandedPosts[post.id] || false;
+
             return (
-              <div
-                key={post.id}
-                className="flex flex-wrap md:flex-nowrap items-start border-b pb-4 mb-4"
-              >
+              <div key={post.id} className="flex flex-wrap md:flex-nowrap items-start border-b pb-4 mb-4">
                 {/* Text Section */}
                 <div className="flex-1 pr-4 mb-4 md:mb-0">
                   <h3 className="text-xl font-semibold">
-                    <Link
-                      href={post.link}
-                      className="text-blue-500 hover:underline"
-                    >
+                    <Link href={post.link} className="text-blue-500 hover:underline">
                       {post.title}
                     </Link>
                   </h3>
-                  <p className="text-gray-700 mb-2">{truncated}</p>
+                  <p className="text-gray-700 mb-2">{isExpanded ? full : truncated}</p>
+                  
                   {truncated !== full && (
-                    <Link
-                      href={post.link}
-                      className="text-blue-500 hover:underline"
+                    <button 
+                      onClick={() => toggleReadMore(post.id)}
+                      className="text-blue-500 hover:underline focus:outline-none"
                     >
-                      Read More
-                    </Link>
+                      {isExpanded ? "Show Less" : "Read More"}
+                    </button>
                   )}
-                  <span className="block mt-2 text-sm text-gray-500">
-                    {post.date}
-                  </span>
+
+                  <span className="block mt-2 text-sm text-gray-500">{post.date}</span>
                 </div>
 
                 {/* Image Section */}
@@ -69,7 +73,7 @@ const BlogIndex = () => {
                     alt={post.title}
                     width={200}
                     height={150}
-                    className="rounded w-full h-auto md:w-[200px] md:h-[150px]" // Responsive for mobile
+                    className="rounded w-full h-auto md:w-[200px] md:h-[150px]"
                     priority
                   />
                 </div>
