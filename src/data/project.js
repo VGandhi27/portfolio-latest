@@ -1,37 +1,31 @@
-import portfolio from '../images/Portfolio.png'
-import ans from '../images/ANS.webp'
 const projects = [
-    {
-      id: 1,
-      title: "AI Chatbot with Vector Search",
-      description:
-        "Developed an AI-powered chatbot using Next.js, Django backend, and PostgreSQL for storing vector embeddings.",
-      image: portfolio,
-      link: "/projects/ai-chatbot",
-      technologies: ["Next.js", "Django", "PostgreSQL", "Hugging Face"],
-      date: "March 2025",
-    },
-    {
-      id: 2,
-      title: "3D Portfolio Home Page",
-      description:
-        "Built an interactive 3D home page for a personal portfolio using Next.js and Three.js.",
-      image: portfolio,
-      link: "/projects/3d-portfolio",
-      technologies: ["Next.js", "Three.js", "Tailwind CSS"],
-      date: "February 2025",
-    },
-    {
-      id: 3,
-      title: "Autonomous Network Solution",
-      description:
-        "Developed an intent-driven autonomous network dashboard using data pipelines and real-time analytics.",
-      image: ans,
-      link: "/projects/autonomous-network",
-      technologies: ["Django", "React", "Data Pipeline", "AI Models"],
-      date: "January 2025",
-    },
-  ];
-  
-  export default projects;
-  
+  {
+    id: 1,
+    title: "AI Chatbot",
+    description:
+      "An intelligent AI chatbot that leverages NLP and vector embeddings for a seamless conversational experience. It supports multiple integrations and real-time responses.",
+    image: "/images/ai-chatbot.png", // Replace with actual image path
+    techStack: ["Python", "Django", "PostgreSQL", "Hugging Face"],
+    link: "https://aichatbot.example.com",
+  },
+  {
+    id: 2,
+    title: "Portfolio 3D",
+    description:
+      "A futuristic portfolio website with a 3D interactive home page built using Three.js. Showcases projects, blogs, and experience in an immersive way.",
+    image: "/images/portfolio-3d.png", // Replace with actual image path
+    techStack: ["Next.js", "Three.js", "Framer Motion", "Tailwind CSS"],
+    link: "https://vidushiportfolio.example.com",
+  },
+  {
+    id: 3,
+    title: "Sentiment Analysis Dashboard",
+    description:
+      "A real-time dashboard that classifies and visualizes sentiment trends using machine learning models. Designed for businesses to analyze customer feedback.",
+    image: "/images/sentiment-dashboard.png", // Replace with actual image path
+    techStack: ["Python", "Django", "Scikit-Learn", "Pandas", "D3.js"],
+    link: "https://sentiment-analysis-1-r0ao.onrender.com/",
+  },
+];
+
+export default projects;

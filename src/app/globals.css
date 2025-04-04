@@ -29,3 +29,8 @@ body {
 .navbar-margin {
   margin-top: 0.5rem;
 }
+
+.project-card {
+  background: linear-gradient(135deg, #000000, #1a0b23, #39064a, #5e0d6b, #000000);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
