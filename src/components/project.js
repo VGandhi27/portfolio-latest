@@ -1,8 +1,11 @@
-'use client';
+import { useState } from "react";
 import projects from "../data/project";
 import Link from "next/link";
+import Image from "next/image";
 
 const Projects = () => {
+  const [hoveredId, setHoveredId] = useState(null);
+
   return (
     <div className="max-w-6xl mx-auto p-8 text-center mt-16">
       <h1 className="text-5xl font-bold text-black-300 mb-8">
@@ -13,25 +16,38 @@ const Projects = () => {
         {projects.map((project) => (
           <div
             key={project.id}
-            className="p-6 rounded-3xl shadow-lg transition transform hover:-translate-y-2 hover:shadow-purple-500/50 project-card"
+            onMouseEnter={() => setHoveredId(project.id)}
+            onMouseLeave={() => setHoveredId(null)}
+            className={`bg-gradient-to-br from-black via-[#39064a] to-black 
+              p-6 rounded-3xl shadow-lg transition transform hover:-translate-y-2 hover:shadow-purple-500/50 
+              duration-300 ease-in-out relative overflow-hidden`}
           >
             <h2 className="text-2xl font-semibold text-white">{project.title}</h2>
-            <p className="text-gray-300 mt-2">{project.description}</p>
+            <p className="text-gray-400 mt-2">{project.description}</p>
 
-            <div className="mt-4 relative">
-              <video
-                src={project.video} 
-                poster={project.image}  // Show image before playing
-                className="w-full rounded-lg border border-gray-800"
-                muted
-                playsInline
-                onMouseEnter={(e) => e.target.play()}
-                onMouseLeave={(e) => e.target.pause()}
-              />
+            {/* Media Section */}
+            <div className="mt-4 relative rounded-lg border border-gray-800 overflow-hidden">
+              {hoveredId === project.id ? (
+                <video
+                  src={project.video}
+                  autoPlay
+                  muted
+                  loop
+                  className="w-full h-[300px] object-cover rounded-xl transform scale-110 transition duration-300"
+                />
+              ) : (
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={500}
+                  height={300}
+                  className="rounded-xl object-cover"
+                />
+              )}
             </div>
 
             {/* Tech Stack */}
-            <div className="flex gap-4 mt-4 justify-center flex-wrap">
+            <div className="flex flex-wrap gap-2 mt-4 justify-center">
               {project.techStack.map((tech, index) => (
                 <span key={index} className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-sm">
                   {tech}
