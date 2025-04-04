@@ -1,6 +1,6 @@
+'use client';
 import projects from "../data/project";
 import Link from "next/link";
-import Image from "next/image";
 
 const Projects = () => {
   return (
@@ -18,13 +18,15 @@ const Projects = () => {
             <h2 className="text-2xl font-semibold text-white">{project.title}</h2>
             <p className="text-gray-300 mt-2">{project.description}</p>
 
-            <div className="mt-4">
-              <Image
-                src={project.image}
-                alt={project.title}
-                width={500}
-                height={300}
-                className="rounded-lg border border-gray-800"
+            <div className="mt-4 relative">
+              <video
+                src={project.video} 
+                poster={project.image}  // Show image before playing
+                className="w-full rounded-lg border border-gray-800"
+                muted
+                playsInline
+                onMouseEnter={(e) => e.target.play()}
+                onMouseLeave={(e) => e.target.pause()}
               />
             </div>
 
