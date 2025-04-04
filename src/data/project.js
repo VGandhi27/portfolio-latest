@@ -5,7 +5,7 @@ const projects = [
     description:
       "An intelligent AI chatbot that leverages NLP and vector embeddings for a seamless conversational experience. It supports multiple integrations and real-time responses.",
     image: "/images/ai-chatbot.png", // Fallback image
-    video: "/videos/ai-chatbot.mp4", // Video preview on hover
+    video: "/videos/Sentiment_Analysis.mp4", // Video preview on hover
     techStack: ["Python", "Django", "PostgreSQL", "Hugging Face"],
     link: "https://aichatbot.example.com",
   },
@@ -15,7 +15,7 @@ const projects = [
     description:
       "A futuristic portfolio website with a 3D interactive home page built using Three.js. Showcases projects, blogs, and experience in an immersive way.",
     image: "/images/portfolio-3d.png",
-    video: "/videos/portfolio-3d.mp4",
+    video: "/videos/Sentiment_Analysis.mp4",
     techStack: ["Next.js", "Three.js", "Framer Motion", "Tailwind CSS"],
     link: "https://vidushiportfolio.example.com",
   },
