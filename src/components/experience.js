@@ -1,10 +1,11 @@
 "use client";
 import { useState } from "react";
-import experienceData from "../data/experience.json"; // Import experience data
-import "../app/style/experience.scss"; // Import the SCSS file
+import experienceData from "../data/experience.json";
+import "../app/style/experience.scss";
+import { FaLink } from "react-icons/fa";
 
 const ExperiencePage = () => {
-  const [experiences] = useState(experienceData); // Set initial state with imported data
+  const [experiences] = useState(experienceData);
 
   return (
     <div className="timelineContainer" style={{ marginTop: "3rem" }}>
@@ -17,6 +18,17 @@ const ExperiencePage = () => {
           >
             <div className="timelineDot"></div>
             <div className="experienceCard">
+              {experience.link && (
+                <a
+                  href={experience.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="experienceTopRightButton"
+                >
+                  <FaLink/>
+                </a>
+              )}
+
               <h3>{experience.role}</h3>
               <h4>{experience.company}</h4>
               <span className="duration">{experience.duration}</span>

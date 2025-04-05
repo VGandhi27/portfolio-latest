@@ -66,6 +66,7 @@
   }
 
   .experienceCard {
+    position: relative;
     background: linear-gradient(135deg, #000000, #070056, #39064a, #5e0d6b, #000000);
     color: #fff;
     padding: 20px;
@@ -75,6 +76,7 @@
     z-index: 1;
     width: calc(50% - 40px);
     text-align: left;
+    
 
     @media (max-width: 768px) {
       width: 100%;
@@ -119,6 +121,33 @@
     .experienceCard {
       width: 100%;
       margin-left: 50px; // Add more spacing to the card from left
+      position: relative;
+
     }
+  }
+}
+
+.experienceTopRightButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #fff;
+  color: #470d6e;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+
+  &:hover {
+    background-color: #ece1f1;
+    transform: scale(1.1);
   }
 }
