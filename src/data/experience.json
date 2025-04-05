@@ -8,20 +8,41 @@
     },
     { 
       "id":2,
+      "role": "Technical Writer",
+      "company": "Hashnode",
+      "duration": "Feb 2023 - Present",
+      "description": "Being a technical writer on Hashnode gives me an exciting opportunity to share my learning in Public. I often write tech blogs on various tech fields."
+    },
+    { 
+      "id":4,
+      "role": "Youtube Content Creator",
+      "company": "Youtube",
+      "duration": "Jan 2023 - Present",
+      "description": "Passionate and experienced GDSC Lead with a proven track record of organizing and leading successful tech events and initiatives. Proven ability to motivate and inspire others, as well as to build and manage high-performing teams. Expertise in software development and a strong interest in emerging technologies."
+    },
+    { 
+      "id":3,
       "role": "Google GDSC Technical Lead",
       "company": "Google Developer Students Club",
       "duration": "August 2023 - July 2024",
       "description": "Passionate and experienced GDSC Lead with a proven track record of organizing and leading successful tech events and initiatives. Proven ability to motivate and inspire others, as well as to build and manage high-performing teams. Expertise in software development and a strong interest in emerging technologies."
     },
     { 
-      "id":3,
+      "id":4,
+      "role": "Research Intern",
+      "company": "Echelon Institute of Technology,Faridabad,Haryana,India",
+      "duration": "Jan 2023 - July 2024",
+      "description": "As a Research Intern, I contributed to academic research initiatives under the guidance of Dr. Stuti Saxena and Dr. Monica Garg. During this tenure, I co-authored and published two research papers:“SVM-Based Framework for Breast Cancer Detection” – This paper was presented at the COM-IT-Con ‘23 International Conference and published in Springer's Advances in Artificial-Business Analytics and Quantum Machine Learning.Another paper “Analysing the Causes of Mood Disorders: A Comprehensive Study” – A deep-dive research analyzing psychological and environmental factors contributing to mood disorders."
+    },
+    { 
+      "id":4,
       "role": "Web Content Writer",
       "company": "Papersdrop",
       "duration": "April 2022 - February 2023",
       "description": "I completed my Content Writer Internship at Papersdrop! It was a great experience where I learned about various new technologies and developed essential skills.With the help and support of our papersdrop team, I publish 7 Blogs throughout this internship."
     },
     { 
-      "id":4,
+      "id":5,
       "role": "Contributor @Hacktoberfest'23",
       "company": "Hacktoberfest",
       "duration": "September 2023 - November 2023",
@@ -29,10 +50,31 @@
     },
     { 
       "id":5,
+      "role": "Big Data and Hadoop Club — Core Team Member",
+      "company": "Echelon Institute of Technology,Faridabad,Haryana,India",
+      "duration": "September 2022 - July 2023",
+      "description": "As a core team member of the Big Data and Hadoop Club, I contributed to organizing workshops, mentoring juniors, and managing club activities focused on data technologies. My responsibilities included developing front-end modules for data visualization, writing technical blogs, and collaborating on projects involving MongoDB and Hadoop ecosystems."
+    },
+    { 
+      "id":6,
       "role": "Contributor @Hacktoberfest'22",
       "company": "Hacktoberfest",
       "duration": "October 2022 - November 2022",
       "description": "Made an open-source contribution on Github in various repositories which helped me polish my Java, and C++ skills."
+    },
+    { 
+      "id":6,
+      "role": "Department Newsletter Committee — Member",
+      "company": "Echelon Institute of Technology,Faridabad,Haryana,India",
+      "duration": "August 2021 - September 2022",
+      "description": "Served as an active member of the editorial committee, managing monthly newsletters for the department. I was involved in content planning, article editing, layout designing, and coordinating with faculty and students for contributions. Also contributed to front-end newsletter templates using HTML/CSS."
+    },
+    { 
+      "id":6,
+      "role": "Kshitij Club — Coordinator",
+      "company": "Echelon Institute of Technology,Faridabad,Haryana,India",
+      "duration": "December 2020 - August 2021",
+      "description": "Led the Kshitij Club in organizing creative writing events, blogging competitions, and talent showcases. My role involved team coordination, event planning, and promotion, fostering a culture of self-expression and creativity within the college community."
     }
   ]
   
