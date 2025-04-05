@@ -1,21 +1,38 @@
 [
-    {
+    { 
+      "id":1,
       "role": "Data Science Engineer",
       "company": "Iktara Data Sciences",
       "duration": "Jan 2024 - Present",
       "description": "Developing the Airtel Transmission System and creating an inventory data storage pipeline for Airtel. Responsible for detecting configuration changes and building dashboards for model training."
     },
-    {
+    { 
+      "id":2,
       "role": "Google GDSC Technical Lead",
       "company": "Google Developer Students Club",
       "duration": "August 2023 - July 2024",
       "description": "Passionate and experienced GDSC Lead with a proven track record of organizing and leading successful tech events and initiatives. Proven ability to motivate and inspire others, as well as to build and manage high-performing teams. Expertise in software development and a strong interest in emerging technologies."
     },
-    {
+    { 
+      "id":3,
       "role": "Web Content Writer",
       "company": "Papersdrop",
       "duration": "April 2022 - February 2023",
       "description": "I completed my Content Writer Internship at Papersdrop! It was a great experience where I learned about various new technologies and developed essential skills.With the help and support of our papersdrop team, I publish 7 Blogs throughout this internship."
+    },
+    { 
+      "id":4,
+      "role": "Contributor @Hacktoberfest'23",
+      "company": "Hacktoberfest",
+      "duration": "September 2023 - November 2023",
+      "description": "Made an open-source contribution on Github in various repositories which helped me polish my skills at in Java, C, Python, Web Development and C++"
+    },
+    { 
+      "id":5,
+      "role": "Contributor @Hacktoberfest'22",
+      "company": "Hacktoberfest",
+      "duration": "October 2022 - November 2022",
+      "description": "Made an open-source contribution on Github in various repositories which helped me polish my Java, and C++ skills."
     }
   ]
   
