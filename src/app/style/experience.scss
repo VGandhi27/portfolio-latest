@@ -7,7 +7,7 @@
 
 .title {
   font-size: 3.5rem;
-  color: #7a34a9;
+  color:  #470d6e;
   margin-bottom: 50px;
 }
 
@@ -25,7 +25,7 @@
     transform: translateX(-50%);
     width: 4px;
     height: 100%;
-    background-color: #c792ea;
+    background-color: #470d6e;
 
     @media (max-width: 768px) {
       left: 30px; // Shift timeline to the right
@@ -54,7 +54,7 @@
     top: 0;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #c792ea;
+    background-color:  #470d6e;
     width: 16px;
     height: 16px;
     border-radius: 50%;
