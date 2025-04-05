@@ -8,7 +8,7 @@ const ExperiencePage = () => {
 
   return (
     <div className="timelineContainer" style={{ marginTop: "3rem" }}>
-      <h1 className="title">My Work Experience</h1>
+      <h1 className="title text-5xl">My Work Experience</h1>
       <div className="timeline">
         {experiences.map((experience, index) => (
           <div
