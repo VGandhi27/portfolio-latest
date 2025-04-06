@@ -39,8 +39,8 @@ const Navbar = () => {
           <Link href="/research" onClick={handleLinkClick}>
             Research
           </Link>
-          <Link href="/projects" onClick={handleLinkClick}>
-            Projects
+          <Link href="/project" onClick={handleLinkClick}>
+            Project
           </Link>
           <Link href="/experience" onClick={handleLinkClick}>
             Experience
