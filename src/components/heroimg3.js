@@ -68,7 +68,7 @@ export default function Hero() {
 
       {/* CTA Button */}
       <motion.a
-        href="#projects"
+        href="/project"
         className="mt-6 px-6 py-3 bg-blue-500 rounded-full text-white font-semibold shadow-lg hover:bg-blue-600 transition relative overflow-hidden"
         whileHover={{ scale: 1.1 }}
       >
