@@ -32,7 +32,7 @@ export default function ChatWithMe() {
       if (!response.ok) throw new Error("Failed to fetch response");
 
       const data = await response.json();
-      const botResponseText = data.results?.[0]?.text || "No relevant answer found.";
+      const botResponseText = data.generated_answer || "No relevant answer found.";
       const botResponse = {
         text: botResponseText.replace(/\n/g, "<br/>"),
         sender: "bot",
