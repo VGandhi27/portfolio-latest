@@ -23,10 +23,18 @@ export default function ChatWithMe() {
     setLoading(true);
 
     try {
+      const history = messages
+        .filter((msg) => msg.sender !== "system")
+        .slice(-3)
+        .map(({ sender, text }) => ({
+          role: sender === "user" ? "user" : "assistant",
+          content: text,
+        }));
+
       const response = await fetch("http://localhost:40/chatbot/search/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ query: input }),
+        body: JSON.stringify({ query: input, history }),
       });
 
       if (!response.ok) throw new Error("Failed to fetch response");
@@ -37,6 +45,7 @@ export default function ChatWithMe() {
         text: botResponseText.replace(/\n/g, "<br/>"),
         sender: "bot",
         time: new Date(),
+        sources: data.source_texts || [],
       };
 
       setMessages((prevMessages) => [...prevMessages, botResponse]);
@@ -56,13 +65,19 @@ export default function ChatWithMe() {
     return date.toLocaleTimeString("en-US", {
       hour: "2-digit",
       minute: "2-digit",
-      hour12: true, // Ensures AM/PM formatting
+      hour12: true,
     });
   };
-  
+
+  // Feedback submission (stub)
+  const handleFeedback = async (text, feedback) => {
+    console.log("Feedback:", feedback, "on:", text);
+    // You can send this to your backend if needed
+    // await fetch('/feedback', { method: 'POST', body: JSON.stringify({ text, feedback }) })
+  };
 
   return (
-    <div className="min-h-[90vh] flex flex-col items-center justify-center text-white bg-gradient-to-b from-purple-900 to-black" style ={{marginTop:'3rem'}}>
+    <div className="min-h-[90vh] flex flex-col items-center justify-center text-white bg-gradient-to-b from-purple-900 to-black" style={{ marginTop: "3rem" }}>
       <div className="w-full max-w-4xl bg-purple-800 p-6 rounded-2xl shadow-xl">
         <h2 className="text-3xl font-bold mb-4 text-center text-white">💬 Chat with Me</h2>
 
@@ -79,11 +94,42 @@ export default function ChatWithMe() {
             >
               <p dangerouslySetInnerHTML={{ __html: msg.text }} />
               <p className="text-xs text-gray-400 mt-1">{formatTime(msg.time)}</p>
+
+              {/* Sources (for bot messages only) */}
+              {msg.sender === "bot" && msg.sources && msg.sources.length > 0 && (
+                <details className="mt-2 text-xs text-gray-300">
+                  <summary className="cursor-pointer hover:underline">📄 View Sources</summary>
+                  <ul className="mt-1 list-disc ml-4">
+                    {msg.sources.map((src, i) => (
+                      <li key={i}>
+                        <span className="font-semibold">{src.source}:</span>{" "}
+                        {src.text.slice(0, 100)}...
+                      </li>
+                    ))}
+                  </ul>
+                </details>
+              )}
+
+              {/* Feedback Buttons */}
+              {msg.sender === "bot" && (
+                <div className="mt-2 flex gap-3 text-white/70 text-sm">
+                  <button
+                    onClick={() => handleFeedback(msg.text, "up")}
+                    className="hover:text-white transition"
+                  >
+                    👍
+                  </button>
+                  <button
+                    onClick={() => handleFeedback(msg.text, "down")}
+                    className="hover:text-white transition"
+                  >
+                    👎
+                  </button>
+                </div>
+              )}
             </div>
           ))}
-          {loading && (
-            <div className="text-gray-400 italic mt-2">Typing...</div>
-          )}
+          {loading && <div className="text-gray-400 italic mt-2">Typing...</div>}
           <div ref={chatEndRef}></div>
         </div>
 
