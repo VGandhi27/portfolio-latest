@@ -4,7 +4,7 @@ export default function About_Com() {
     
     <div className=" min-h-[80vh] max-w-4xl mx-auto p-6 text-left mt-10" style={{marginTop: '6rem' ,marginBottom: '2.2rem'}}>
      <div className="flex justify-between items-center">
-    <h1 className="text-4xl font-bold mt-2 mb-6">About Me</h1>
+    <h1 className="text-4xl font-bold mt-2 mb-6">A Glimpse About Me</h1>
     <a
       href='/Vidushi_CV.pdf'
       className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
