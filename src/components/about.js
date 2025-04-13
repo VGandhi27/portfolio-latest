@@ -2,18 +2,12 @@
 export default function About_Com() {
   return (
     
-    <div className=" min-h-[80vh] max-w-4xl mx-auto p-6 text-left mt-10" style={{marginTop: '6rem' ,marginBottom: '2.2rem'}}>
-     <div className="flex justify-between items-center">
-    <h1 className="text-4xl font-bold mt-2 mb-6">A Glimpse About Me</h1>
-    <a
-      href='/Vidushi_CV.pdf'
-      className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Resume
-    </a>
-    </div>
+    <div className=" min-h-[80vh] max-w-4xl mx-auto p-6 mt-10" style={{marginTop: '6rem' ,marginBottom: '2.2rem'}}>
+     
+    <h1 className="text-5xl text-center font-bold text-black-300 mb-8">
+     A Glimpse <span className="text-purple-700">about me</span>
+    </h1>
+
     <p className="text-lg mb-3 text-justify">
       👋 Hi! I’m Vidushi! I’m a Data Science Engineer at IKTARA Data Sciences, specializing in machine learning, 
       web development, and data analysis. I completed my studies at <strong>Echelon Institute of Technology, Faridabad</strong>, 
@@ -32,9 +26,18 @@ export default function About_Com() {
       In my free time, I enjoy exploring new technologies and contributing to open-source projects.
        Feel free to connect with me on LinkedIn!
     </p>
+
+    <a
+      href='/Vidushi_CV.pdf'
+      className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Resume
+    </a>
   </div>
 
-      
+  
 
   );
 }
