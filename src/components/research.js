@@ -13,6 +13,16 @@ const truncateText = (text, wordLimit) => {
 };
 
 const Research = () => {
+  // Manage visibility of summaries per paper
+  const [showFullSummaries, setShowFullSummaries] = useState({});
+
+  const toggleSummary = (paperId) => {
+    setShowFullSummaries((prev) => ({
+      ...prev,
+      [paperId]: !prev[paperId],
+    }));
+  };
+
   return (
     <div className="max-w-4xl mx-auto p-6 text-left" style={{ marginTop: "5rem" }}>
       <h1 className="text-4xl font-bold text-gray-800 mb-8">
@@ -21,8 +31,7 @@ const Research = () => {
 
       <div>
         {researchPapers.map((paper) => {
-          const [showFullSummary, setShowFullSummary] = useState(false); // State to toggle full summary
-          const toggleSummary = () => setShowFullSummary(!showFullSummary);
+          const showFullSummary = showFullSummaries[paper.id] || false;
 
           return (
             <div
@@ -46,7 +55,7 @@ const Research = () => {
                 </p>
                 {paper.summary.split(" ").length > 50 && (
                   <button
-                    onClick={toggleSummary}
+                    onClick={() => toggleSummary(paper.id)}
                     className="text-blue-500 hover:underline"
                   >
                     {showFullSummary ? "Show Less" : "Read More"}
@@ -63,9 +72,9 @@ const Research = () => {
                 <Image
                   src={paper.image}
                   alt={paper.title}
-                  width={200} // Default width
-                  height={200} // Default height
-                  className="rounded w-full h-auto md:w-[200px] md:h-[200px]" // Responsive image size
+                  width={200}
+                  height={200}
+                  className="rounded w-full h-auto md:w-[200px] md:h-[200px]"
                 />
               </div>
             </div>

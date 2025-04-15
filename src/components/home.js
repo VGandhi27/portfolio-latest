@@ -13,7 +13,7 @@ export default function Home() {
         className="text-center"
       >
         <h2 className="text-4xl md:text-6xl font-extrabold leading-tight">
-          Hi, I'm <span className="text-blue-500">Vidushi</span> 👋
+          Hi, I&apos;m <span className="text-blue-500">Vidushi</span> 👋
         </h2>
         <p className="text-lg text-gray-600 mt-3 max-w-2xl mx-auto">
           I craft intelligent software solutions, specializing in AI, Machine Learning, and Full-Stack Development.
@@ -22,7 +22,7 @@ export default function Home() {
           href="contact"
           className="mt-5 inline-block px-6 py-3 bg-blue-600 text-white rounded-lg text-lg font-semibold hover:bg-blue-700 transition"
         >
-          Let's Connect
+          Let&apos;s Connect
         </a>
       </motion.section>
     </div>

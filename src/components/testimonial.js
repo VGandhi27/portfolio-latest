@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import testimonialsData from "../data/testimonial.json";
 import "../app/style/testimonial.scss";
+import Image from 'next/image';
 
 const Testimonials = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -40,9 +41,9 @@ const Testimonials = () => {
               }`}
             >
               <div className="testimonial-card">
-                <p className="testimonial-text">"{testimonial.feedback}"</p>
+                <p className="testimonial-text">&apos;{testimonial.feedback}&apos;</p>
                 <div className="testimonial-header">
-                  <img src={testimonial.image} alt={testimonial.name} />
+                  <Image src={testimonial.image} alt={testimonial.name} />
                   <div className="info">
                     <h3>{testimonial.name}</h3>
                     <p>{testimonial.role}</p>

@@ -9,14 +9,14 @@ export default function About_Com() {
     </h1>
 
     <p className="text-lg mb-3 text-justify">
-      👋 Hi! I’m Vidushi! I’m a Data Science Engineer at IKTARA Data Sciences, specializing in machine learning, 
+      👋 Hi! I&apos;m Vidushi! I&apos;m a Data Science Engineer at IKTARA Data Sciences, specializing in machine learning, 
       web development, and data analysis. I completed my studies at <strong>Echelon Institute of Technology, Faridabad</strong>, 
       and I hold a degree in Computer Science And Engineering.
     </p>
     <p className="text-lg mb-3 text-justify">
       During my time at university, I conducted research under Dr. Monika Goyal and Dr. Stuti Saxena, focusing on emerging 
-      technologies and applications in data science. I published two research papers: <strong>"SVM-Based Framework for Breast Cancer 
-        Detection"</strong> and <strong>"Analysing the Causes of Mood Disorders: A Comprehensive Study."</strong>
+      technologies and applications in data science. I published two research papers: <strong>&quot;SVM-Based Framework for Breast Cancer 
+        Detection&quot;</strong> and <strong>&quot;Analysing the Causes of Mood Disorders: A Comprehensive Study.&quot;</strong>
     </p>
     <p className="text-lg mb-3 text-justify">
       As a GDSC Lead at the Google Developer Students Club, I lead tech initiatives and organize events like TECHLON, where my 
