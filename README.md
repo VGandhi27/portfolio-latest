@@ -3,7 +3,7 @@
 Welcome to my personal portfolio! This website showcases my projects, research, blogs, and expertise in Data Science, AI, and Full-Stack Development.  
 
 ## 🌐 Live Website  
-🔗 [Visit My Portfolio](https://your-portfolio-link.com)  
+🔗 [Visit My Portfolio](https://vidushigandhi279.vercel.app/)  
 
 ## 📌 About Me  
 I’m a **Software Engineer & Data Science Enthusiast**, currently working at **Iktara Data Sciences**, where I develop AI-powered network automation solutions for Airtel. My expertise includes:  
