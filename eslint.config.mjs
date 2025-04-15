@@ -6,12 +6,12 @@ import { defineConfig } from "eslint/config";
 export default defineConfig([
   {
     files: ["**/*.{js,mjs,cjs,jsx}"],
-    plugins: { js },
+    plugins: { js, react: pluginReact }, // ✅ alias pluginReact as 'react'
     languageOptions: {
       globals: globals.browser,
     },
     rules: {
-      "react/no-unescaped-entities": "off", // 👈 this disables the apostrophe warning
+      "react/no-unescaped-entities": "off", // ✅ Turn off the apostrophe warning
     },
     extends: ["js/recommended"],
   },
