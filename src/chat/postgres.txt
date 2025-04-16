@@ -17,7 +17,7 @@ CREATE EXTENSION IF NOT EXISTS vector;
 CREATE TABLE embeddings (
     id SERIAL PRIMARY KEY,
     content TEXT, 
-    embedding VECTOR(384)  -- Adjust this if needed
+    embedding VECTOR(2560)  -- Adjust this if needed
 );
 
 
