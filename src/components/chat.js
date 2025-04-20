@@ -31,7 +31,7 @@ export default function ChatWithMe() {
           content: text,
         }));
 
-      const response = await fetch("http://localhost:40/chatbot/search/", {
+      const response = await fetch("https://ai-chatbot-gchg.onrender.com/chatbot/search/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ query: input, history }),
